@@ -15,7 +15,7 @@ Directory contains 3 working integrations
 Directory contains assets necessary to test your integration locally:
 
 * mraid.js - mraid library, as described in mraid specification it needs to be included in every ad parts
-* prelude.js - mraid controller, handles instructions send by mraid.js and perform them on the ad container and the ad
+* prelude.js - mraid controller, handles instructions send by mraid.js and perform them on the ad container and the ad. This file needs to be included in the main ad part.
 * container_template.erb - container template file, with which LiquidM ad servers wrap your ad.
 
 ## More informations
