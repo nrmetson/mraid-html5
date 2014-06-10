@@ -1,0 +1,134 @@
+﻿html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+body {
+  background-color: none !important;
+}
+
+div {
+  display:block;
+  position:absolute;
+}
+
+div.close {
+  z-index:20000;
+  top:0px;
+  right:0px;
+  width: 48px;
+  height: 48px;
+}
+
+.hidden {
+  display:none !important;
+}
+
+.north {
+  top:0 !important;
+}
+
+.east {
+  right:0 !important;
+}
+
+.south {
+  bottom:0 !important;
+}
+
+.west {
+  left:0 !important;
+}
+
+.slidetopdown {
+  -webkit-animation:slidetopdown 2s ease-in;
+  -webkit-animation-iteration-count: 1;
+  -webkit-animation-fill-mode: forwards;
+  -webkit-transform-origin: 0% 0%;
+}
+
+@-webkit-keyframes slidetopdown {
+    0% {
+      -webkit-transform:translateY(-500px);
+    }
+    100% {
+      -webkit-transform: translateY(0px);
+    }
+}
+
+.slidedowntop {
+  -webkit-animation:slidedowntop 2s ease-in;
+  -webkit-animation-iteration-count: 1;
+  -webkit-animation-fill-mode: forwards;
+  -webkit-transform-origin: 0% 0%;
+}
+
+@-webkit-keyframes slidedowntop {
+    0% {
+      -webkit-transform:translateY(500px);
+    }
+    100% {
+      -webkit-transform: translateY(0px);
+    }
+}
+
+.slideleftright {
+  -webkit-animation:slideleftright 2s ease-in;
+  -webkit-animation-iteration-count: 1;
+  -webkit-animation-fill-mode: forwards;
+  -webkit-transform-origin: 0% 0%;
+}
+
+@-webkit-keyframes slideleftright {
+    0% {
+      -webkit-transform:translateX(-500px);
+    }
+    100% {
+      -webkit-transform: translateX(0px);
+    }
+}
+
+.sliderightleft {
+  -webkit-animation:sliderightleft 2s ease-in;
+  -webkit-animation-iteration-count: 1;
+  -webkit-animation-fill-mode: forwards;
+  -webkit-transform-origin: 0% 0%;
+}
+
+@-webkit-keyframes sliderightleft {
+    0% {
+      -webkit-transform:translateX(500px);
+    }
+    100% {
+      -webkit-transform: translateX(0px);
+    }
+}
+
+.fadein {
+  -webkit-animation:fadein 2s ease-in;
+  -webkit-animation-iteration-count: 1;
+  -webkit-animation-fill-mode: forwards;
+  -webkit-transform-origin: 0% 0%;
+}
+
+@-webkit-keyframes fadein {
+  0% {
+    opacity: 0;
+    -webkit-transition: opacity;
+  }
+  100% {
+    opacity: 1;
+  }
+}

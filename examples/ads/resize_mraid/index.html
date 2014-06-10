@@ -1,0 +1,75 @@
+﻿<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <link rel="stylesheet" href="css/style.css">
+
+  <style type="text/css">
+    body {
+      background: #000;
+    }
+    body .expanded {
+      display: none;
+    }
+    body.resized .expanded {
+      display: block;
+    }
+    body .expanded .initial {
+      display: none;
+    }
+  </style>
+</head>
+
+<body>
+  <script type="text/javascript" src="mraid.js"></script>
+  <script>window.jQuery || document.write("<script src='//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js'>\x3C/script>")</script>
+
+  <div class="initial">
+    <img src="assets/300x50.gif">
+  </div>
+
+  <div class="expanded">
+    <img src="assets/320x480.jpg">
+  </div>
+
+
+<script>
+if (mraid.getState() == 'loading') {
+  mraid.addEventListener('ready', function(state) {
+    initDefaultState();
+  });
+} else {
+  initDefaultState();
+}
+
+
+function initDefaultState() {
+  mraid.setResizeProperties({ 
+    width: 100,
+    height: 200, 
+    offsetX: 100, 
+    offsetY: 200 
+  });
+
+  mraid.addEventListener("error", function(message, action){
+    console.log({ message: message, action: action })
+  });
+}
+
+$(".initial > img").click(function(){
+  mraid.resize()
+
+
+  console.log('closing in 3 seconds...');
+
+  setTimeout(function(){
+    mraid.close()
+  }, 3000)
+})
+
+</script>
+</body>
+</html>

@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <!-- Use title if it's in the page YAML frontmatter -->
+        <title>Ads :: Resizable mraid</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+        
+
+        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    </head>
+    <body>
+      
+      <h2>Two part mraid template</h2>
+      <p>Occaecati ex quisquam nobis et et sed enim consectetur. pariatur minus similique totam eius sed enim tenetur. qui molestiae ut beatae quaerat maxime ratione nihil omnis
+
+Veritatis porro ut aperiam sapiente repellat doloremque unde rerum qui quia laudantium optio odit. non voluptas quaerat rerum distinctio consectetur animi perferendis qui repudiandae voluptas cupiditate eum maiores. et at rerum corrupti numquam occaecati impedit incidunt odio. facere quis quisquam consequatur qui labore voluptas voluptatem ducimus inventore voluptas
+
+Et rerum mollitia porro consequatur quibusdam in ducimus ipsum perferendis. alias dolore id occaecati ut ratione voluptates corrupti vero. iusto eius esse magnam accusantium inventore repellendus et molestiae magni sequi sint. modi et vitae velit voluptatem qui perferendis architecto voluptas dolor dicta aliquam. iste laborum quia sint laborum voluptatem deleniti aut natus blanditiis id nesciunt adipisci quaerat. numquam et dolorem sed veniam ipsa aliquam aut saepe dolorum quia. voluptatibus dolore sit est in optio quis quaerat fuga unde aut mollitia qui
+
+Voluptatibus sed et quaerat saepe quia maiores nam quisquam dicta ut veritatis reiciendis laudantium. praesentium occaecati qui mollitia facere qui sit nam quia commodi sed magni animi deleniti et. molestiae architecto possimus nulla dolorum et nulla et dolor
+
+Dolore cupiditate est explicabo quisquam voluptatem consequatur deserunt autem. qui neque molestias iste architecto nobis beatae aspernatur aut dolorem exercitationem illum nesciunt eveniet expedita. nihil ut ratione similique delectus dolorem. saepe velit est ea voluptas non ex. eum similique saepe alias sint assumenda. animi nisi neque odit fugiat aut ipsam aspernatur. voluptatum mollitia dolores vitae consectetur impedit
+
+Et quasi id rerum corrupti voluptatem debitis est. ipsa quo ut consequatur aut ex et fugit quas rerum incidunt qui. suscipit aliquid doloribus saepe. dolor sit impedit blanditiis perferendis cum totam expedita aspernatur optio. quo id quidem sit sit beatae optio et ipsam consequuntur itaque magnam quod. consequatur aut dignissimos ut vel quasi. possimus ipsum et voluptas eligendi debitis quia ipsa
+
+Sit provident porro voluptatem ut pariatur repellat quidem. totam itaque ut consequuntur et maiores voluptas qui delectus voluptatibus qui est. officiis alias voluptas magnam non repudiandae doloremque aliquid natus amet ipsum nihil. dolorem esse magni repellendus. repellat nisi odio et quia dolorem aspernatur
+
+Facilis porro quaerat enim adipisci vel quaerat adipisci animi. quibusdam voluptas maxime quis enim quo placeat odio quas sed quo qui eum vel. corrupti qui ipsum natus et molestias velit occaecati numquam voluptas nobis aut fuga quos sint. dicta optio velit sint ea eius sapiente facere laborum eum in eligendi quisquam. est velit voluptates omnis molestias repellat accusantium voluptas porro nesciunt
+
+Rerum beatae voluptates et explicabo neque incidunt voluptatem. voluptatum a tenetur magni eos neque ut adipisci ut eum neque. doloremque nulla est sint nihil a qui odit
+
+Voluptatem et aut ut dolor autem dolorum voluptatem sapiente dolores qui voluptates inventore. dolorum vel autem quia sunt qui deleniti et exercitationem quia. est sint tenetur et exercitationem voluptas autem neque sed minus deserunt. illum eum repudiandae maiores. minima et iure laborum consectetur error aperiam quasi quo velit. pariatur autem at voluptatem saepe ad molestiae debitis officiis tempora eum officiis id</p>
+
+      <div id='mraid_ad_container_id' style="position: static; width: 300px; height: 50px; overflow: hidden">
+  <div id="mraid_ad_container_id_wrapper">
+    <iframe width="100%" height="100%" src='resize_mraid/index.html' allowtransparency='true' seamless scrolling='no' style='z-index:10000; background:none;position: static; overflow: hidden !important;border: none !important;background-color: none !important;'></iframe>
+    <iframe width="100%" height="100%" allowtransparency='true' seamless scrolling='no' style='display:none; z-index:10000; background:none;position: fixed; overflow: hidden !important;border: none !important;background-color: none !important;'></iframe>
+  </div>
+</div>
+
+
+      <script>function Controller(adNode) {
+  this.adContainerNode = adNode;
+  this.wrapperNode = adNode.childNodes[1];
+  this.firstPartNode = this.wrapperNode.childNodes[1];
+  this.secondPartNode = this.wrapperNode.childNodes[3];
+  this.placementType = this.firstPartNode.style.position == 'fixed' ? 'interstital' : 'inline';
+  this.initialWidth = this.adContainerNode.style.width
+  this.initialHeight = this.adContainerNode.style.height
+  this.closeIcon = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAYAAADhAJiYAAADb0lEQVR42u1XS0tbQRROqhQaUhRMTOKyG9OKWzUg5EG1bsRu/AXddiNtfSxqTLt1HQvd9hdkI2nUVLSQRekuxHcUQRBSXYXePCZ2vuGe25N4FZIbaBc5MMxl7syZ757znce12TrSkY78e7Hr84NQKNRNi4eHh8/K5fK7SqWyIscyG7HT09MI7Zudne3C2XaDMhQWCoXn1Wr1mxCicnOPSGCZy1+XL8x0WBL9CyFd0iKfcZkEdJNOp2uLi4ulkZERLRAIGGNhYUHb2tqqYg9EnvlEVma67JYsk0gkHFLxDi7Y2Ngoj42NleWyuG9gD/bqoHZ2d3cfM1B2K27qIjBra2u/6cLBwUHhdruFw+GoG1jDO9oXj8c13ao/5ubmHpHOptEQgclNBGZ4eNi4rK+v75Zl+BrtxVno0DRt3RJ/QGByE79A8kRMTEyoZ6/XawDweDxqjkQiYmlpqQ5UKpVSlrq4uHjTMiBEE8jJOYOLIEdHRwaQ/v5+AwzGwcGB2hOLxYy1cDhcLRaL4FNhdXXV1TQYqfQpQhvRRJzBPDk5KY6Pj9WF+/v7t1yWy+XUO5mLxPT0tFrz+/1q3tzcLMFKMoe9bhoQkh4OI7ShDGR1uVzGxVKpuhhzI5iTkxPR09Oj1tyuv+fm5+c1PUd9aBoQMjAOI89AGSIIs8/nMwDAbRAAyWaz6jmfzxsABgYGBD+LPKUDWm4F0DIOQwlXysmLsbe3J0i4tTjZTQBF2woI7qNnsgxZygy0CaD3bQPEv5ysA8uA4BBEGL33eX11gOB+HdDHljmE2kRW4UmPwIDAjZzi0Qc+EadkyqBS8qppQJKcIRxGoeRhHwwGDWsATG9vb13Y8+ibmpoS7Gx1e3sbJaSYyWQ8LfVB0ko/5YDbbiVG5Bmn02m4kXOG8hRPjKOjo6VarQbrrFspHS9hpWQyWeJlIBqNipmZmbrQ5ikBliEwrHSo/un6+jpkqQ+SX/TlruLKo41z5q7iqvdGvC9qqf3olm773th+DA0NmbYfAMTbDwYmbdIWt2YlWc+cBAru45y6a4Az5CaAkW5+aLWVbWw7u8l9IDqiDymBt6/IM6h9KMggsL43btIOt62vVkRH9N3X4MsAk9jLX6+ursbb3uTz3yAO7Pz8PGjyC7Qigbw9Ozt70vAxdltHOtKR/0T+AL2SJvDTWPbCAAAAAElFTkSuQmCC" 
+}
+
+Controller.prototype = {
+  expand : function(arguments) {
+    if (! arguments["url"]) {
+      this.firstPartNode.contentDocument.body.setAttribute("class", "expanded");
+    } else {
+      this.firstPartNode.style.display = 'none'
+      this.secondPartNode.src = arguments["url"]
+      this.secondPartNode.style.display = 'block'
+    }
+
+    if(!arguments["useCustomClose"]) {
+      this._setClose() 
+    }
+
+    this._resizeWrapper({ width: arguments.width, height: arguments.height, position: "fixed" });
+    this._maximizeAdContainer()
+  },
+
+  resize : function(arguments) {
+    this.firstPartNode.contentDocument.body.setAttribute("class", "resized");
+    this._resizeWrapper(arguments)
+  },
+
+  _resizeWrapper : function(arguments) {
+    var position = arguments.position || (arguments.x && arguments.width ? "fixed" : "static")
+    if(arguments.width && arguments.height) {
+      this.wrapperNode.style.width = arguments.width + "px";
+      this.wrapperNode.style.height = arguments.height + "px";
+    } else {
+      this.wrapperNode.style.width = "auto";
+      this.wrapperNode.style.height = "auto";
+    }
+    this.wrapperNode.style.position = position;
+    this.wrapperNode.style.overflow = position == "static" ? "visible" : "hidden";
+    this.wrapperNode.style.top = (arguments.x || 0) + "px";
+    this.wrapperNode.style.left = (arguments.y || 0) + "px";
+  },
+
+  _maximizeAdContainer : function() {
+    this.adContainerNode.style.width = "auto"
+    this.adContainerNode.style.height = "auto"
+    this.adContainerNode.style.position = "fixed"
+    this.adContainerNode.style.top = 0
+    this.adContainerNode.style.left = 0
+    this.adContainerNode.style.right = 0
+    this.adContainerNode.style.bottom = 0 
+    this.adContainerNode.style.background = "rgba(0, 0, 0, 0.6)"
+  },
+
+  _minimizeAdContainer : function() {
+    this.adContainerNode.style.width = this.initialWidth
+    this.adContainerNode.style.height = this.initialHeight
+    this.adContainerNode.style.position = "static"
+    this.adContainerNode.style.top = "initial"
+    this.adContainerNode.style.left = "initial" 
+    this.adContainerNode.style.right = "initial" 
+    this.adContainerNode.style.bottom = "initial" 
+    this.adContainerNode.style.background = "none"
+  },
+
+  close : function(fromState) {
+    if ( fromState == "default" ) {
+      this.adContainerNode.style.display = 'none';
+    } else {
+      this.firstPartNode.contentDocument.body.removeAttribute("class", "expanded");
+      this.firstPartNode.contentDocument.body.removeAttribute("class", "resized");
+      this.secondPartNode.style.display = 'none';
+      this.firstPartNode.style.display = 'block';
+      var closeNode = this.wrapperNode.getElementsByClassName("mraidClose")[0]
+      if(closeNode) {
+        closeNode.remove();
+      }
+      this._resizeWrapper({});
+      this._minimizeAdContainer();
+    }
+  },
+
+  getCurrentPosition : function() {
+    return {
+      x: this.wrapperNode.offsetLeft,
+      y: this.wrapperNode.offsetTop,
+      width: this.wrapperNode.offsetWidth,
+      height: this.wrapperNode.offsetHeight
+    }
+  },
+
+  getPlacementType : function() {
+    return this.placementType;
+  },
+
+  _setClose : function() {
+    var closeNode = document.createElement('img');
+
+    closeNode.setAttribute('src', this.closeIcon);
+    closeNode.setAttribute('class', 'mraidClose');
+    closeNode.setAttribute('onclick', 'mraid.close();');
+    closeNode.style.position = 'absolute';
+    closeNode.style.width = '50px';
+    closeNode.style.height = '50px';
+    closeNode.style.top = '0px';
+    closeNode.style.right = '0px';
+    closeNode.style.zIndex = '99999999999';
+
+    this.wrapperNode.appendChild(closeNode);
+  },
+
+  postMessage: function(event) {
+    if (event.target == "controller") {
+      return this[event.action].apply(controller, [event.arguments])
+    }
+  }
+}
+
+window.controller = new Controller(document.getElementById('mraid_ad_container_id'));
+
+//todo 
+if ("localStorage" in window && window["localStorage"] !== null) { localStorage.setItem("madvertise", "0"); } (function() {
+  xhr = new XMLHttpRequest();
+  xhr.open('GET', 'http://localhost:1142/site/TestTokn/ad/QOnPBrZ2/pingback/jp4lmttz', true);
+  xhr.send();
+}());
+</script>
+
+      <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
+      <div id="debugger" style="position: fixed; right: 0; top: 0; background: #ddd">
+        <iframe width="100%" height="100%" src='/debugger.html' allowtransparency='true' seamless scrolling='no' style='z-index:10000; background:none;position: static; overflow: hidden !important;border: none !important;background-color: none !important;'></iframe>
+      </div>
+      <!-- <script src="/js/mraid.js"></script> -->
+    </body>
+</html>
