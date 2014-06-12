@@ -14,7 +14,7 @@
     body .expanded {
       display: none;
     }
-    body.expanded .expanded {
+    body.resized .expanded {
       display: block;
     }
     body .expanded .initial {
@@ -24,7 +24,7 @@
 </head>
 
 <body>
-  <script type="text/javascript" src="../../../src/mraid.js"></script>
+  <script type="text/javascript" src="../../src/mraid.js"></script>
   <script>window.jQuery || document.write("<script src='//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js'>\x3C/script>")</script>
 
   <div class="initial">
@@ -47,9 +47,11 @@ if (mraid.getState() == 'loading') {
 
 
 function initDefaultState() {
-  mraid.setExpandProperties({
-    width : 320,
-    height : 480,
+  mraid.setResizeProperties({
+    width: 100,
+    height: 200,
+    offsetX: 100,
+    offsetY: 200
   });
 
   mraid.addEventListener("error", function(message, action){
@@ -58,7 +60,14 @@ function initDefaultState() {
 }
 
 $(".initial > img").click(function(){
-  mraid.expand('two_part_mraid/second_part.html')
+  mraid.resize()
+
+
+  console.log('closing in 3 seconds...');
+
+  setTimeout(function(){
+    mraid.close()
+  }, 3000)
 })
 
 </script>
