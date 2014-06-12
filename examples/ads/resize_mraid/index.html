@@ -24,7 +24,7 @@
 </head>
 
 <body>
-  <script type="text/javascript" src="mraid.js"></script>
+  <script type="text/javascript" src="../../src/mraid.js"></script>
   <script>window.jQuery || document.write("<script src='//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js'>\x3C/script>")</script>
 
   <div class="initial">
@@ -47,11 +47,11 @@ if (mraid.getState() == 'loading') {
 
 
 function initDefaultState() {
-  mraid.setResizeProperties({ 
+  mraid.setResizeProperties({
     width: 100,
-    height: 200, 
-    offsetX: 100, 
-    offsetY: 200 
+    height: 200,
+    offsetX: 100,
+    offsetY: 200
   });
 
   mraid.addEventListener("error", function(message, action){
