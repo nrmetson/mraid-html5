@@ -21,3 +21,8 @@ Directory contains assets necessary to test your integration locally:
 ## More informations
 
 For more informations we recommend you to read Mobile Rich-media Ad Interface Definitions http://www.iab.net/media/file/IAB_MRAID_v2_FINAL.pdf or contact LiquidM (support@liquidm.com)
+
+
+## Current Live Demo under:
+
+http://liquidm.github.io/mraid-html5/
