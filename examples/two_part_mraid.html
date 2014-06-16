@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <!-- Use title if it's in the page YAML frontmatter -->
+        <title>Ads :: Expandable mraid</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+        
+
+        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    </head>
+    <body>
+      
+      <h2>Two part mraid template</h2>
+      <p>Quia consequatur quos fuga ullam similique. commodi sunt sed aut laboriosam id recusandae ad sit. ducimus consequatur et culpa nemo est a harum. iste voluptas labore ut aliquid fugit temporibus sint. aut qui voluptatem consequuntur repellat laudantium qui. eaque eum et et sed enim. vel quia asperiores facilis
+
+Ea sapiente et voluptatem nostrum nisi. eum repudiandae nam et laboriosam. doloribus ratione est enim nesciunt dolor sed aliquam reprehenderit autem quis a ab autem blanditiis
+
+Quas voluptatem qui voluptatem rerum. occaecati aut nulla odio minima ipsam quod et vel. reprehenderit iste dicta in cum aperiam assumenda vero fuga placeat. enim debitis assumenda dolores sequi qui autem molestiae quidem quod impedit. quo soluta ipsum iusto. non nihil possimus tenetur id
+
+Id quos itaque non earum in sunt. hic aperiam id porro consequuntur expedita veniam voluptatem incidunt repudiandae quasi quibusdam. quam saepe qui sapiente. qui autem eum in quod quis aperiam magnam delectus eveniet a. magnam eos aut soluta quaerat quos illum. nihil ipsam sit doloribus totam quia ut voluptas qui dolorum nobis aut at id sed. porro molestias ea dolorum recusandae ullam qui ab rem natus non inventore cumque autem recusandae
+
+Et enim libero aut occaecati voluptates deserunt dolorem qui perspiciatis maiores quis qui molestiae. quae enim sint dolorum voluptatum. quidem fugit molestiae dicta aliquid earum. veniam possimus sint non facere maxime ratione soluta libero consequatur saepe et tempore voluptatem
+
+Ullam consequuntur a blanditiis voluptatem alias dolor dolor explicabo et placeat. quibusdam earum recusandae omnis odio consequatur in autem ea nulla. sapiente in ut quaerat necessitatibus non voluptatibus perferendis alias eius
+
+Omnis animi cumque facilis possimus architecto vero. dolores qui explicabo est repellendus ut nobis temporibus veritatis ut qui. voluptatem assumenda sit possimus molestias provident blanditiis cumque qui velit suscipit voluptas. beatae laboriosam explicabo amet ut et recusandae nihil corporis. ullam molestiae id quia eveniet voluptas. deserunt architecto ut quae aspernatur dolore est velit aliquid. consectetur minus consequatur aspernatur maxime nulla qui tempora voluptatem voluptatum sequi id odio vel eos
+
+Dolor aut consequuntur fugiat. qui voluptate itaque ad debitis dignissimos fugit neque et ullam placeat. asperiores fugit neque ea temporibus sit provident
+
+Reiciendis ducimus hic est odit sit cupiditate eos officiis omnis aut quos aut rerum. veniam mollitia labore adipisci error quo eius sint molestiae error. numquam iure modi repellendus cum quia beatae dolorem animi in ut eius consequuntur et. quia sed quia eius sit laborum odit et ipsum. illo dolor sunt maxime magnam provident at officiis. enim nemo sit dignissimos aliquam facere quia et vitae magni minima vel
+
+A minus magnam aliquam dignissimos et minima aliquam voluptas mollitia. laborum delectus reiciendis libero eaque est voluptates ipsam maxime necessitatibus. distinctio eos sit rem nobis omnis culpa est minima. officiis quia asperiores aliquid nam fugiat cumque molestias. deleniti minus molestias neque officiis adipisci ad iste itaque aut nobis commodi nihil</p>
+
+      <div id='two_part_mraid_ad_container_id' style="position: static; width: 320px; height: 50px; overflow: hidden">
+  <div id="two_part_mraid_ad_container_id_wrapper">
+    <iframe width="100%" height="100%" src='two_part_mraid/index.html' allowtransparency='true' seamless scrolling='no' style='z-index:10000; background:none;position: static; overflow: hidden !important;border: none !important;background-color: none !important;'></iframe>
+    <iframe width="100%" height="100%" allowtransparency='true' seamless scrolling='no' style='display:none; z-index:10000; background:none;position: fixed; overflow: hidden !important;border: none !important;background-color: none !important;'></iframe>
+  </div>
+</div>
+
+
+      <script>function Controller(adNode) {
+  this.adContainerNode = adNode;
+  this.wrapperNode = adNode.childNodes[1];
+  this.firstPartNode = this.wrapperNode.childNodes[1];
+  this.secondPartNode = this.wrapperNode.childNodes[3];
+  this.placementType = this.firstPartNode.style.position == 'fixed' ? 'interstital' : 'inline';
+  this.initialWidth = this.adContainerNode.style.width
+  this.initialHeight = this.adContainerNode.style.height
+  this.closeIcon = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAYAAADhAJiYAAADb0lEQVR42u1XS0tbQRROqhQaUhRMTOKyG9OKWzUg5EG1bsRu/AXddiNtfSxqTLt1HQvd9hdkI2nUVLSQRekuxHcUQRBSXYXePCZ2vuGe25N4FZIbaBc5MMxl7syZ757znce12TrSkY78e7Hr84NQKNRNi4eHh8/K5fK7SqWyIscyG7HT09MI7Zudne3C2XaDMhQWCoXn1Wr1mxCicnOPSGCZy1+XL8x0WBL9CyFd0iKfcZkEdJNOp2uLi4ulkZERLRAIGGNhYUHb2tqqYg9EnvlEVma67JYsk0gkHFLxDi7Y2Ngoj42NleWyuG9gD/bqoHZ2d3cfM1B2K27qIjBra2u/6cLBwUHhdruFw+GoG1jDO9oXj8c13ao/5ubmHpHOptEQgclNBGZ4eNi4rK+v75Zl+BrtxVno0DRt3RJ/QGByE79A8kRMTEyoZ6/XawDweDxqjkQiYmlpqQ5UKpVSlrq4uHjTMiBEE8jJOYOLIEdHRwaQ/v5+AwzGwcGB2hOLxYy1cDhcLRaL4FNhdXXV1TQYqfQpQhvRRJzBPDk5KY6Pj9WF+/v7t1yWy+XUO5mLxPT0tFrz+/1q3tzcLMFKMoe9bhoQkh4OI7ShDGR1uVzGxVKpuhhzI5iTkxPR09Oj1tyuv+fm5+c1PUd9aBoQMjAOI89AGSIIs8/nMwDAbRAAyWaz6jmfzxsABgYGBD+LPKUDWm4F0DIOQwlXysmLsbe3J0i4tTjZTQBF2woI7qNnsgxZygy0CaD3bQPEv5ysA8uA4BBEGL33eX11gOB+HdDHljmE2kRW4UmPwIDAjZzi0Qc+EadkyqBS8qppQJKcIRxGoeRhHwwGDWsATG9vb13Y8+ibmpoS7Gx1e3sbJaSYyWQ8LfVB0ko/5YDbbiVG5Bmn02m4kXOG8hRPjKOjo6VarQbrrFspHS9hpWQyWeJlIBqNipmZmbrQ5ikBliEwrHSo/un6+jpkqQ+SX/TlruLKo41z5q7iqvdGvC9qqf3olm773th+DA0NmbYfAMTbDwYmbdIWt2YlWc+cBAru45y6a4Az5CaAkW5+aLWVbWw7u8l9IDqiDymBt6/IM6h9KMggsL43btIOt62vVkRH9N3X4MsAk9jLX6+ursbb3uTz3yAO7Pz8PGjyC7Qigbw9Ozt70vAxdltHOtKR/0T+AL2SJvDTWPbCAAAAAElFTkSuQmCC" 
+}
+
+Controller.prototype = {
+  expand : function(arguments) {
+    if (! arguments["url"]) {
+      this.firstPartNode.contentDocument.body.setAttribute("class", "expanded");
+    } else {
+      this.firstPartNode.style.display = 'none'
+      this.secondPartNode.src = arguments["url"]
+      this.secondPartNode.style.display = 'block'
+    }
+
+    if(!arguments["useCustomClose"]) {
+      this._setClose() 
+    }
+
+    this._resizeWrapper({ width: arguments.width, height: arguments.height, position: "fixed" });
+    this._maximizeAdContainer()
+  },
+
+  resize : function(arguments) {
+    this.firstPartNode.contentDocument.body.setAttribute("class", "resized");
+    this._resizeWrapper(arguments)
+  },
+
+  _resizeWrapper : function(arguments) {
+    var position = arguments.position || (arguments.x && arguments.width ? "fixed" : "static")
+    if(arguments.width && arguments.height) {
+      this.wrapperNode.style.width = arguments.width + "px";
+      this.wrapperNode.style.height = arguments.height + "px";
+    } else {
+      this.wrapperNode.style.width = "auto";
+      this.wrapperNode.style.height = "auto";
+    }
+    this.wrapperNode.style.position = position;
+    this.wrapperNode.style.overflow = position == "static" ? "visible" : "hidden";
+    this.wrapperNode.style.top = (arguments.x || 0) + "px";
+    this.wrapperNode.style.left = (arguments.y || 0) + "px";
+  },
+
+  _maximizeAdContainer : function() {
+    this.adContainerNode.style.width = "auto"
+    this.adContainerNode.style.height = "auto"
+    this.adContainerNode.style.position = "fixed"
+    this.adContainerNode.style.top = 0
+    this.adContainerNode.style.left = 0
+    this.adContainerNode.style.right = 0
+    this.adContainerNode.style.bottom = 0 
+    this.adContainerNode.style.background = "rgba(0, 0, 0, 0.6)"
+  },
+
+  _minimizeAdContainer : function() {
+    this.adContainerNode.style.width = this.initialWidth
+    this.adContainerNode.style.height = this.initialHeight
+    this.adContainerNode.style.position = "static"
+    this.adContainerNode.style.top = "initial"
+    this.adContainerNode.style.left = "initial" 
+    this.adContainerNode.style.right = "initial" 
+    this.adContainerNode.style.bottom = "initial" 
+    this.adContainerNode.style.background = "none"
+  },
+
+  close : function(fromState) {
+    if ( fromState == "default" ) {
+      this.adContainerNode.style.display = 'none';
+    } else {
+      this.firstPartNode.contentDocument.body.removeAttribute("class", "expanded");
+      this.firstPartNode.contentDocument.body.removeAttribute("class", "resized");
+      this.secondPartNode.style.display = 'none';
+      this.firstPartNode.style.display = 'block';
+      var closeNode = this.wrapperNode.getElementsByClassName("mraidClose")[0]
+      if(closeNode) {
+        closeNode.remove();
+      }
+      this._resizeWrapper({});
+      this._minimizeAdContainer();
+    }
+  },
+
+  getCurrentPosition : function() {
+    return {
+      x: this.wrapperNode.offsetLeft,
+      y: this.wrapperNode.offsetTop,
+      width: this.wrapperNode.offsetWidth,
+      height: this.wrapperNode.offsetHeight
+    }
+  },
+
+  getPlacementType : function() {
+    return this.placementType;
+  },
+
+  _setClose : function() {
+    var closeNode = document.createElement('img');
+
+    closeNode.setAttribute('src', this.closeIcon);
+    closeNode.setAttribute('class', 'mraidClose');
+    closeNode.setAttribute('onclick', 'mraid.close();');
+    closeNode.style.position = 'absolute';
+    closeNode.style.width = '50px';
+    closeNode.style.height = '50px';
+    closeNode.style.top = '0px';
+    closeNode.style.right = '0px';
+    closeNode.style.zIndex = '99999999999';
+
+    this.wrapperNode.appendChild(closeNode);
+  },
+
+  postMessage: function(event) {
+    if (event.target == "controller") {
+      return this[event.action].apply(controller, [event.arguments])
+    }
+  }
+}
+
+window.controller = new Controller(document.getElementById('two_part_mraid_ad_container_id'));
+</script>
+
+      <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
+      <div id="debugger" style="position: fixed; right: 0; top: 0; background: #ddd">
+        <iframe width="100%" height="100%" src='../debugger.html' allowtransparency='true' seamless scrolling='no' style='z-index:10000; background:none;position: static; overflow: hidden !important;border: none !important;background-color: none !important;'></iframe>
+      </div>
+    </body>
+</html>

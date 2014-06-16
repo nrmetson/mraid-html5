@@ -24,16 +24,11 @@
 </head>
 
 <body>
-  <script type="text/javascript" src="../../src/mraid.js"></script>
-  <script type="text/javascript" src="../../src/prelude.js"></script>
+  <script type="text/javascript" src="mraid.js"></script>
   <script>window.jQuery || document.write("<script src='//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js'>\x3C/script>")</script>
 
   <div class="initial">
     <img src="assets/320x50.png">
-  </div>
-
-  <div class="expanded">
-    <img src="assets/320x480.png">
   </div>
 
 <script>
@@ -55,12 +50,10 @@ function initDefaultState() {
   mraid.addEventListener("error", function(message, action){
     console.log({ message: message, action: action })
   });
-
-  mraid.getState();
 }
 
 $(".initial > img").click(function(){
-  mraid.expand()
+  mraid.expand('/examples/two_part_mraid/second_part.html')
 })
 
 </script>

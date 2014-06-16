@@ -1,40 +1,51 @@
+<script type="text/javascript" src="src/mraid.js"></script>
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
 
 <div class="debug"></div>
 
 <script>
-  var mraid = window.parent.mraid
-
-  var actions = [
-    "getState",
-    "getDefaultPosition",
-    "getCurrentPosition",
-    "getMaxSize",
-  ]
-
-  function update(what) {
-    if(typeof mraid[what]() == "object") {
-      var value = JSON.stringify(mraid[what]())
-    } else {
-      var value = mraid[what]()
-    }
-
-    $("."+what + " span").html(value)
+  if (mraid.getState() == 'loading') {
+    mraid.addEventListener('ready', function(state) {
+      loadDebugger();
+    });
+  } else {
+    loadDebugger();
   }
 
-  $(actions).each(function(i,e){
-    div = $("<div class='"+e+"'>" + e + ": <span></span></div>")
-    $(".debug").append(div)
-  });
+  function loadDebugger() {
+    var mraid = window.parent.mraid
 
-  (function reload() {
+    var actions = [
+      "getState",
+      "getDefaultPosition",
+      "getCurrentPosition",
+      "getMaxSize",
+    ]
 
-    $(actions).each(function(i, e){
-      update(e)
-    })
+    function update(what) {
+      if(typeof mraid[what]() == "object") {
+        var value = JSON.stringify(mraid[what]())
+      } else {
+        var value = mraid[what]()
+      }
 
-    setTimeout(function(){
-      reload()
-    }, 200)
-  })()
+      $("."+what + " span").html(value)
+    }
+
+    $(actions).each(function(i,e){
+      div = $("<div class='"+e+"'>" + e + ": <span></span></div>")
+      $(".debug").append(div)
+    });
+
+    (function reload() {
+
+      $(actions).each(function(i, e){
+        update(e)
+      })
+
+      setTimeout(function(){
+        reload()
+      }, 200)
+    })()
+  }
 </script>
