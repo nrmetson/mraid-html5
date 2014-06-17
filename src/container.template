@@ -1,0 +1,8 @@
+<div id='$rich_media_container_id$' style="position: $position$; width: $initial_width$px; height: $initial_height$px; overflow: hidden">
+  <div id="$rich_media_container_id$_wrapper">
+    <iframe width="100%" height="100%" src='$full_richmedia_url$' allowtransparency='true' seamless scrolling='no' style='z-index:10000; background:none;position: $position$; overflow: hidden !important;border: none !important;background-color: none !important;'></iframe>
+    <iframe width="100%" height="100%" allowtransparency='true' seamless scrolling='no' style='display:none; z-index:10000; background:none;position: fixed; overflow: hidden !important;border: none !important;background-color: none !important;'></iframe>
+  </div>
+</div>
+
+
